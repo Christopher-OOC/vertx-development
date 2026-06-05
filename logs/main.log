@@ -1,0 +1,19 @@
+2026-06-05 19:49:44,943 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-7] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,480 [vert.x-eventloop-thread-6] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-8] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,479 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 19:49:45,481 [vert.x-eventloop-thread-0] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed RestApiVerticle with id 2
+2026-06-05 19:49:45,481 [vert.x-eventloop-thread-9] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1
+2026-06-05 22:08:23,840 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-05 22:08:24,062 [main] WARN io.netty.resolver.dns.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/[2001:4860:4860:0:0:0:0:8888]:53, /[2001:4860:4860:0:0:0:0:8844]:53] (Google Public DNS as a fallback)
+2026-06-05 22:08:24,285 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 22:08:24,286 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 22:08:24,286 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 22:08:24,286 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - HTTP server started on port 8888
+2026-06-05 22:08:24,286 [vert.x-eventloop-thread-0] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed RestApiVerticle with id 2
+2026-06-05 22:08:24,288 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1
