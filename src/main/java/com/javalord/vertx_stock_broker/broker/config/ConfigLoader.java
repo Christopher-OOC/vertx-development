@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ConfigLoader {
 
-  static String SERVER_PORT = "SERVER_PORT";
+  public static String SERVER_PORT = "SERVER_PORT";
   static final List<String> EXPOSED_ENVIRONMENTS_VARIABLES = Arrays.asList(SERVER_PORT);
 
   public static Future<BrokerConfig> load(Vertx vertx) {
@@ -25,10 +25,15 @@ public class ConfigLoader {
       .setType("env")
       .setConfig(new JsonObject().put("keys", exposedKeys));
 
+    var propertyStore = new ConfigStoreOptions()
+      .setType("sys")
+      .setConfig(new JsonObject().put("cache", false));
+
     var retriever = ConfigRetriever.create(
       vertx,
       new ConfigRetrieverOptions()
         .addStore(envStore)
+        .addStore(propertyStore)
     );
 
     return retriever.getConfig().map(BrokerConfig::from);

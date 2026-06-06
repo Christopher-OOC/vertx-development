@@ -234,3 +234,52 @@
 2026-06-06 09:47:30,361 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
 2026-06-06 09:47:30,361 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
 2026-06-06 09:47:30,362 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1
+2026-06-06 09:52:08,751 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-06 09:52:09,342 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:52:09,342 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:52:09,342 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:52:09,342 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:52:09,461 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:52:09,461 [vert.x-eventloop-thread-0] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed RestApiVerticle with id 2
+2026-06-06 09:52:09,461 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:52:09,461 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:52:09,461 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:52:09,462 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1
+2026-06-06 09:53:28,655 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-06 09:53:29,238 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:53:29,238 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:53:29,238 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:53:29,238 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=10000)
+2026-06-06 09:53:29,355 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:53:29,355 [vert.x-eventloop-thread-0] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed RestApiVerticle with id 2
+2026-06-06 09:53:29,356 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:53:29,356 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:53:29,356 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 10000
+2026-06-06 09:53:29,356 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1
+2026-06-06 09:54:02,048 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-06 09:54:02,613 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Config port not found at null
+2026-06-06 09:54:02,613 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Config port not found at null
+2026-06-06 09:54:02,613 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Config port not found at null
+2026-06-06 09:54:02,613 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Config port not found at null
+2026-06-06 09:59:08,095 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-06 09:59:08,736 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 09:59:08,736 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 09:59:08,736 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 09:59:08,736 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 09:59:08,864 [vert.x-eventloop-thread-0] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed RestApiVerticle with id 2
+2026-06-06 09:59:08,865 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1
+2026-06-06 09:59:08,866 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 09:59:08,867 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 09:59:08,867 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 09:59:08,867 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 10:02:17,321 [main] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Info...
+2026-06-06 10:02:18,018 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 10:02:18,018 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 10:02:18,018 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 10:02:18,018 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - Retrieved configuration: BrokerConfig(serverPort=12000)
+2026-06-06 10:02:18,188 [vert.x-eventloop-thread-3] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 10:02:18,188 [vert.x-eventloop-thread-0] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed RestApiVerticle with id 2
+2026-06-06 10:02:18,188 [vert.x-eventloop-thread-1] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 10:02:18,188 [vert.x-eventloop-thread-2] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 10:02:18,188 [vert.x-eventloop-thread-4] INFO com.javalord.vertx_stock_broker.broker.RestApiVerticle - HTTP server started on port 12000
+2026-06-06 10:02:18,189 [vert.x-eventloop-thread-5] INFO com.javalord.vertx_stock_broker.broker.MainVerticle - Deployed MainVerticle with id 1

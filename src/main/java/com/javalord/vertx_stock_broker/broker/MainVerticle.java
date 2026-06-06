@@ -1,5 +1,6 @@
 package com.javalord.vertx_stock_broker.broker;
 
+import com.javalord.vertx_stock_broker.broker.config.ConfigLoader;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Future;
 import io.vertx.core.VerticleBase;
@@ -15,6 +16,7 @@ public class MainVerticle extends VerticleBase {
   public static final int PORT = 8888;
 
   public static void main(String[] args) {
+    System.setProperty(ConfigLoader.SERVER_PORT, "12000");
     LOGGER.info("Info...");
     System.out.println("Starting...");
     Vertx vertx = Vertx.vertx();
