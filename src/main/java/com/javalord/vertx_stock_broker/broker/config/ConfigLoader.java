@@ -14,7 +14,15 @@ import java.util.List;
 public class ConfigLoader {
 
   public static String SERVER_PORT = "SERVER_PORT";
-  static final List<String> EXPOSED_ENVIRONMENTS_VARIABLES = Arrays.asList(SERVER_PORT);
+  public static String DB_HOST = "DB_HOST";
+  public static String DB_PORT = "DB_PORT";
+  public static String DB_DATABASE = "DB_DATABASE";
+  public static String DB_USER = "DB_USER";
+  public static String DB_PASSWORD = "DB_PASSWORD";
+  public static String CONFIG_FILE =  "application.yml";
+
+  public static final List<String> EXPOSED_ENVIRONMENTS_VARIABLES =
+    Arrays.asList(SERVER_PORT, DB_HOST, DB_PORT, DB_DATABASE, DB_USER, DB_PASSWORD);
 
   public static Future<BrokerConfig> load(Vertx vertx) {
 
@@ -29,11 +37,17 @@ public class ConfigLoader {
       .setType("sys")
       .setConfig(new JsonObject().put("cache", false));
 
+    var yamlStore = new ConfigStoreOptions()
+      .setType("file")
+      .setFormat("yaml")
+      .setConfig(new JsonObject().put("path", CONFIG_FILE));
+
     var retriever = ConfigRetriever.create(
       vertx,
       new ConfigRetrieverOptions()
         .addStore(envStore)
         .addStore(propertyStore)
+        .addStore(yamlStore)
     );
 
     return retriever.getConfig().map(BrokerConfig::from);

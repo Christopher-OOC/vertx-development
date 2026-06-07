@@ -1,6 +1,7 @@
 package com.javalord.vertx_stock_broker.broker;
 
 import com.javalord.vertx_stock_broker.broker.config.ConfigLoader;
+import com.javalord.vertx_stock_broker.broker.db.migration.FlywayMigration;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Future;
 import io.vertx.core.VerticleBase;
@@ -21,9 +22,21 @@ public class MainVerticle extends VerticleBase {
     System.out.println("Starting...");
     Vertx vertx = Vertx.vertx();
     vertx.deployVerticle(new MainVerticle())
+      .onFailure(er -> LOGGER.info(er.getLocalizedMessage()))
+      .compose(next -> migrateDatabase(vertx))
+      .onFailure(t -> LOGGER.info("Error occurred while migrating database: {}", t.getLocalizedMessage()))
       .onSuccess(id -> {
         LOGGER.info("Deployed {} with id {}", MainVerticle.class.getSimpleName(), id);
       });
+  }
+
+  private static Future<Void> migrateDatabase(Vertx vertx) {
+
+    ConfigLoader.load(vertx)
+      .compose(config -> {
+        return FlywayMigration.migrate(vertx, config.getDbConfig());
+      });
+    return null;
   }
 
   @Override

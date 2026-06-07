@@ -5,15 +5,16 @@ import com.javalord.vertx_stock_broker.broker.config.BrokerConfig;
 import com.javalord.vertx_stock_broker.broker.config.ConfigLoader;
 import com.javalord.vertx_stock_broker.broker.quotes.QuotesRestApi;
 import com.javalord.vertx_stock_broker.broker.watchlist.WatchListRestApi;
-import io.vertx.core.AbstractVerticle;
-import io.vertx.core.Future;
-import io.vertx.core.Handler;
-import io.vertx.core.Promise;
+import io.vertx.core.*;
 import io.vertx.core.http.HttpServer;
+
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
+import io.vertx.pgclient.PgConnectOptions;
+import io.vertx.sqlclient.Pool;
+import io.vertx.sqlclient.PoolOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,14 +37,16 @@ public class RestApiVerticle extends AbstractVerticle {
   }
 
   private Future<HttpServer> startHttpServerAndAttachRoutes(BrokerConfig configuration) {
+    Pool db = createDbPool(vertx, configuration);
+
     Router restApi = Router.router(vertx);
     restApi.route()
       .handler(BodyHandler.create())
       .failureHandler(handleFailure());
 
-    AssetsRestApi.attach(restApi);
-    QuotesRestApi.attach(restApi);
-    WatchListRestApi.attach(restApi);
+    AssetsRestApi.attach(restApi, db);
+    QuotesRestApi.attach(restApi, db);
+    WatchListRestApi.attach(restApi, db);
 
     return vertx
       .createHttpServer()
@@ -55,6 +58,21 @@ public class RestApiVerticle extends AbstractVerticle {
       .onFailure(err ->
         LOGGER.error("Failed to start HTTP server", err)
       );
+  }
+
+  private static Pool createDbPool(Vertx vertx, BrokerConfig configuration) {
+    PgConnectOptions connectOptions = new PgConnectOptions()
+      .setHost(configuration.getDbConfig().getHost())
+      .setPort(configuration.getDbConfig().getPort())
+      .setDatabase(configuration.getDbConfig().getDatabase())
+      .setUser(configuration.getDbConfig().getUser())
+      .setPassword(configuration.getDbConfig().getPassword());
+
+    PoolOptions poolOptions = new PoolOptions()
+      .setMaxSize(4);
+
+    return Pool.pool(vertx, connectOptions, poolOptions);
+
   }
 
   private static Handler<RoutingContext> handleFailure() {
